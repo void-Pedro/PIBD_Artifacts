@@ -6,6 +6,13 @@ CREATE PROCEDURE CadastrarCaronista
     @quantidade_avaliacoes INT
 AS
 BEGIN
+    -- Verifica se o caronista_ID existe na tabela usuario_geral
+    IF NOT EXISTS (SELECT 1 FROM usuario_geral WHERE ID = @caronista_ID)
+    BEGIN
+        PRINT 'Erro: O caronista_ID não existe na tabela usuario_geral.';
+        RETURN;
+    END
+
     -- Verifica se já existe um caronista com o mesmo caronista_ID e numero_cnh
     IF EXISTS (SELECT 1 FROM caronista 
                WHERE caronista_ID = @caronista_ID AND numero_cnh = @numero_cnh)
