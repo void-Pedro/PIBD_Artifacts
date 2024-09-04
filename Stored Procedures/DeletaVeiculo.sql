@@ -1,3 +1,14 @@
+/*
+CREATE TABLE IF NOT EXISTS carro (
+	Renavam INT PRIMARY KEY NOT NULL,
+	Placa VARCHAR(7) NOT NULL,
+	Modelo VARCHAR(50) NOT NULL,
+	Cor VARCHAR(30) NOT NULL,
+	Ano INT NOT NULL,
+	Deletado BOOL NOT NULL
+);
+*/
+
 --Exclusão lógica de veículo se não estiver associado a uma viagem futura
 CREATE OR REPLACE PROCEDURE DeletaVeiculo(
     RENAVAM IN NUMBER)
