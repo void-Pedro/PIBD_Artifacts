@@ -1,4 +1,6 @@
 -- Autor: Ana Ellen
+DELIMITER //
+
 CREATE PROCEDURE CadastrarViagem
 	@ID_viagem INT AUTO_INCREMENT,
 	@ID_caronista INT NOT NULL,
@@ -34,4 +36,6 @@ BEGIN
 
     -- Mensagem de confirmação
     PRINT 'Viagem criada com sucesso.';
-END;
+END //
+
+DELIMITER;
