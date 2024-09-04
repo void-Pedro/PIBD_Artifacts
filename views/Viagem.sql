@@ -1,3 +1,4 @@
+-- Autor: Ana Ellen
 CREATE OR REPLACE VIEW vw_viagem AS
 SELECT 
     v.ID_viagem,

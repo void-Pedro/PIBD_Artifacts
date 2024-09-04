@@ -1,3 +1,4 @@
+-- Autor: Ana Ellen
 DELIMITER //
 
 CREATE PROCEDURE GetViagemCaronista(IN caronistaID INT)

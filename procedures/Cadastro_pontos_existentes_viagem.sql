@@ -1,3 +1,4 @@
+-- Autor: Ana Ellen
 DELIMITER //
 
 CREATE PROCEDURE InserirPontoIntermediarioExistente(

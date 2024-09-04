@@ -1,3 +1,4 @@
+-- Autor: Ana Ellen
 DELIMITER //
 
 CREATE PROCEDURE InserirNovoPontoIntermediario(
@@ -32,7 +33,7 @@ BEGIN
             p_rua, 
             p_numero, 
             p_bairro, 
-            p_cidade, 
+            p_ciadade, 
             p_estado
         );
     END IF;
