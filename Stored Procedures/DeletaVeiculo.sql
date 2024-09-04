@@ -19,7 +19,7 @@ BEGIN
     FROM Viagem v
 	WHERE v.Renavam = RENAVAM 
     	AND v.Data_saida >= TRUNC(SYSDATE)
-    	AND	v.Horario_saida > TO_CHAR(SYSDATE, 'HH24:MI:SS');
+    	AND v.Horario_saida > TO_CHAR(SYSDATE, 'HH24:MI:SS');
 
 	IF cont > 0 THEN
         RAISE_APPLICATION_ERROR(-20001, 'Não é possivel excluir o veiculo pois está associado a futuras viagens');
