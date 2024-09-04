@@ -44,7 +44,7 @@ BEGIN
     -- Verifica os dígitos calculados com os da cnh
     IF RIGHT(@cnh, 2) <> CAST(@primeiroDV AS NVARCHAR) + CAST(@segundoDV AS NVARCHAR)
     BEGIN
-        RAISERROR('A CNH digitada é inválida')
+        RAISERROR('A CNH digitada é inválida', 16, 1)
         ROLLBACK TRANSACTION
     END
 END
