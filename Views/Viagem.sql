@@ -2,41 +2,41 @@
 CREATE OR REPLACE VIEW vw_viagem AS
 SELECT 
     v.ID_viagem,
-    v.Data_hora_saida,
-    v.Data_hora_chegada_estimada,
-    v.Valor,
-    v.Status_viagem,
+    v.data_hora_saida,
+    v.data_hora_chegada_estimada,
+    v.valor,
+    v.status_viagem,
 
-    pi.Logradouro,
-    pi.Estado,
-    pi.Cidade,
-    pi.Estado,
+    pi.logradouro,
+    pi.estado,
+    pi.cidade,
+    pi.estado,
 
-	c.Numero,
-    c.Inicio,
-    c.Fim,
+	c.numero,
+    c.inicio,
+    c.fim,
 
-    u.Nome_completo,
+    u.nome_completo,
 
     ce.ID_caroneiro,
     ci.ID_caronista,
 
-    car.Placa,
-    car.Modelo,
-    car.Cor
+    car.placa,
+    car.modelo,
+    car.cor
 FROM 
-    Viagem v
+    viagem v
 	
 -- todos os pontos intermediarios de uma viagem
 LEFT JOIN 
-    Pontos_Intermediarios_Viagem c ON v.ID_viagem = c.ID_viagem
+    pontos_intermediarios_viagem c ON v.ID_viagem = c.ID_viagem
 
 LEFT JOIN 
-    Pontos_Intermediarios pi ON c.CEP = pi.CEP
+    pontos_intermediarios pi ON c.CEP = pi.CEP
 
 -- informaçao dos caroneiros de cada ponto
 LEFT JOIN 
-    Solicita s ON c.CEP = s.CEP AND v.ID_viagem = s.ID_viagem
+    solicita s ON c.CEP = s.CEP AND v.ID_viagem = s.ID_viagem
 LEFT JOIN 
     caroneiro ce ON s.ID_caroneiro = ce.ID_caroneiro
 LEFT JOIN 
@@ -44,10 +44,10 @@ LEFT JOIN
 
 -- informacoes do carro e do caronista
 INNER JOIN 
-    Dirige d ON v.ID_viagem = d.ID_viagem
+    dirige d ON v.ID_viagem = d.ID_viagem
 
 INNER JOIN 
-    Carro car ON d.Renavam = car.Renavam
+    carro car ON d.renavam = car.renavam
 
 LEFT JOIN 
     usuario_geral u ON v.ID_caronista = u.ID
