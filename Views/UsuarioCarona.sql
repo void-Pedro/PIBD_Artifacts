@@ -1,5 +1,7 @@
---View de participantes de uma carona
+--View de pessoas que estão em uma carona
+
 CREATE OR REPLACE VIEW UsuarioCarona AS
-	SELECT ID_caronista, ID_caroneiro, Nota_caronista, Nota_caroneiro
-	FROM Viagem v, Caroneiro_viagem cv
+	SELECT v.ID_viagem, Nome, Nota_caronista, Nota_caroneiro
+	FROM Viagem v, Caroneiro_viagem cv, usuario_geral ug
 	WHERE cv.ID_viagem = v.ID_viagem
+		AND ug.ID = cv.ID_caroneiro;
