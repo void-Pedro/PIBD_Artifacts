@@ -9,9 +9,8 @@ CREATE PROCEDURE InserirNovoPontoIntermediario(
     IN p_bairro VARCHAR(100),
     IN p_cidade VARCHAR(100),
     IN p_estado VARCHAR(100),
-    IN p_data_chegada DATE,
-    IN p_horario_chegada TIME,
-    IN p_horario_saida TIME
+    IN p_datahora_chegada DATETIME,
+    IN p_datahora_saida DATETIME
 )
 BEGIN
     -- Verificar se o ponto intermediário já existe
@@ -46,9 +45,8 @@ BEGIN
         Bairro, 
         Cidade, 
         Estado, 
-        Data_chegada, 
-        Horario_chegada, 
-        Horario_saida
+        DataHora_chegada, 
+        DataHora_saida
     ) VALUES (
         p_id_viagem, 
         p_CEP, 
@@ -56,9 +54,8 @@ BEGIN
         p_bairro, 
         p_cidade, 
         p_estado, 
-        p_data_chegada, 
-        p_horario_chegada, 
-        p_horario_saida
+        p_datahora_chegada, 
+        p_datahora_saida
     );
 END //
 

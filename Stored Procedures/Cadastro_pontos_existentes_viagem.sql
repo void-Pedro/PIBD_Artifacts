@@ -30,9 +30,8 @@ BEGIN
         Bairro,
         Cidade,
         Estado,
-        p_data_chegada, 
-        p_horario_chegada, 
-        p_horario_saida
+        p_datahora_chegada, 
+        p_datahora_saida
     FROM 
         Pontos_intermediarios 
     WHERE 
