@@ -1,0 +1,14 @@
+--Atualiza número de avaliações de um caronista
+--Falta testar
+
+CREATE OR REPLACE TRIGGER trg_Avaliacoes_Caronista
+    AFTER INSERT
+    ON Avaliacoesaronista
+    FOR EACH ROW
+BEGIN
+    UPDATE caronista
+    SET c.quantidade_avaliacoes = COUNT(ac.avaliacao)
+    FROM caronista c INNER JOIN AvaliacoesCaronista ac
+    ON c.ID_caronista = ac.caroneiroID;
+END;
+/
