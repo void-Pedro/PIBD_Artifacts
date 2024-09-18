@@ -1,0 +1,98 @@
+<style>
+.chat-container {
+  border-radius: 30px;
+  background-color: #fff;
+  box-shadow: 0 4px 10px 5px rgba(0, 0, 0, 0.25);
+  display: flex;
+  max-width: 480px;
+  width: 100%;
+  flex-direction: column;
+  overflow: hidden;
+  color: #1e1e1e;
+  text-align: center;
+  margin: 0 auto;
+  padding: 44px 42px 533px 8px;
+  font: 400 13px 'DM Serif Display', -apple-system, Roboto, Helvetica, sans-serif;
+}
+
+.user-info {
+  align-self: flex-start;
+  display: flex;
+  margin-left: 17px;
+  gap: 29px;
+  color: #000;
+  white-space: nowrap;
+  letter-spacing: -1.28px;
+  font: 700 32px 'DM Sans', sans-serif;
+}
+
+.user-avatar {
+  aspect-ratio: 1;
+  object-fit: contain;
+  object-position: center;
+  width: 44px;
+  border-radius: 14px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.message-container {
+  display: flex;
+  margin-top: 22px;
+}
+
+.message-avatar {
+  aspect-ratio: 1.36;
+  object-fit: contain;
+  object-position: center;
+  width: 61px;
+  align-self: flex-start;
+}
+
+.message-bubble {
+  border-radius: 1106px;
+  background-color: rgba(217, 217, 217, 0.2);
+  flex-grow: 1;
+  width: fit-content;
+  padding: 13px 31px 26px;
+}
+
+.user-message {
+  border-radius: 1106px;
+  background-color: rgba(217, 217, 217, 0.6);
+  width: 347px;
+  max-width: 100%;
+  margin: 22px 0 0 17px;
+  padding: 13px 21px 27px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+</style>
+
+<section class="chat-container">
+  <header class="user-info">
+    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/8e1885447c0a2e9114105058357adeae41e7ec72c458dddf8bdf15252a83cd56?placeholderIfAbsent=true&apiKey=9dfda23d791048169a80340690397d74" alt="User avatar" class="user-avatar" />
+    <h2>Pedro</h2>
+  </header>
+  
+  <div class="message-container">
+    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/b88fe6defa36789a91a7273717dc16b4422a0131d323d0045b6a9b4d263ea1de?placeholderIfAbsent=true&apiKey=9dfda23d791048169a80340690397d74" alt="" class="message-avatar" />
+    <p class="message-bubble">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem</p>
+  </div>
+  
+  <p class="user-message">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem</p>
+  
+  <div class="message-container">
+    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/3dcc0fbaf4bde660af2fbd6297e0054dd029d751c6b230d7fbb0a0b2262a8bba?placeholderIfAbsent=true&apiKey=9dfda23d791048169a80340690397d74" alt="" class="message-avatar" />
+    <p class="message-bubble">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem</p>
+  </div>
+</section>
