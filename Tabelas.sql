@@ -12,7 +12,6 @@ CREATE TABLE usuario_geral (
    num_telefone INT NOT NULL,
 
    nome_completo VARCHAR(100) NOT NULL,
-   senha VARCHAR(100) NOT NULL,
    data_nascimento VARCHAR(100) NOT NULL,
    sexo VARCHAR(100) NOT NULL,
    PRIMARY KEY (ID)
@@ -23,6 +22,7 @@ CREATE TABLE estrangeiro (
    ID_usuario INT NOT NULL,
    validade_passaporte VARCHAR(50) NOT NULL,
    numero_passaporte VARCHAR(50) NOT NULL,
+   Senha VARCHAR(50) NOT NULL,
 
    PRIMARY KEY (numero_passaporte),
    FOREIGN KEY (ID_usuario) REFERENCES usuario_geral(ID)
@@ -32,6 +32,7 @@ GO
 CREATE TABLE brasileiro (
    ID_usuario INT NOT NULL,
    CPF INT NOT NULL,
+   Senha VARCHAR(50) NOT NULL,
 
    PRIMARY KEY (CPF),
    FOREIGN KEY (ID_usuario) REFERENCES usuario_geral(ID)
