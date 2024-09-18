@@ -48,7 +48,7 @@ END;
 --Busca Carona 
 CREATE PROCEDURE BuscarCarona
     @Cidade_saida NVARCHAR(100),
-    @DataSaida DATE,
+    @DataSaida VARCHAR(100),
     @Cidade_chegada NVARCHAR(100),
     @NumPassageiro INT
 AS
@@ -62,6 +62,6 @@ BEGIN
     JOIN ponto_intermediario_viagem piv ON v.ID_viagem = piv.ID_viagem
 	JOIN pontos_intermediarios pis ON pis.CEP = piv.CEP_ponto
     WHERE pis.cidade IN (@Cidade_saida, @Cidade_chegada)
-      AND v.data_hora_saida = @DataSaida
+      AND v.data_hora_saida = convert(varchar, @DataSaida, 103)
       AND v.Numero_max_pessoas >= @NumPassageiro;
 END;
