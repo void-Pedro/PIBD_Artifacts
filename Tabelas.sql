@@ -9,7 +9,7 @@ CREATE TABLE usuario_geral (
 
    DDI INT NOT NULL,
    DDD INT NOT NULL,
-   num_telefone INT NOT NULL,
+   num_telefone VARCHAR (50) NOT NULL,
 
    nome_completo VARCHAR(100) NOT NULL,
    data_nascimento VARCHAR(100) NOT NULL,
@@ -31,7 +31,7 @@ GO
 
 CREATE TABLE brasileiro (
    ID_usuario INT NOT NULL,
-   CPF INT NOT NULL,
+   CPF VARCHAR(50) NOT NULL,
    Senha VARCHAR(50) NOT NULL,
 
    PRIMARY KEY (CPF),
