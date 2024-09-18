@@ -1,4 +1,4 @@
-CREATE OR REPLACE PROCEDURE AtualizaPerfil(
+CREATE PROCEDURE AtualizaPerfil(
     @ID_usuario INT,
     @RedeSocial NVARCHAR(100) = NULL,
     @DDI INT = NULL,
