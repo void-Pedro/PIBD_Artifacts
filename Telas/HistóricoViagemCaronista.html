@@ -1,0 +1,142 @@
+<style>
+.historico-viagens-caronista {
+  border-radius: 30px;
+  background-color: #fff;
+  box-shadow: 0 4px 10px 5px rgba(0, 0, 0, 0.25);
+  display: flex;
+  max-width: 480px;
+  width: 100%;
+  flex-direction: column;
+  overflow: hidden;
+  color: #000;
+  text-align: center;
+  margin: 0 auto;
+  padding: 44px 24px 337px;
+  font: 700 16px DM Sans, sans-serif;
+}
+
+.header {
+  align-self: start;
+  display: flex;
+  gap: 32px;
+  font-size: 24px;
+  letter-spacing: -0.96px;
+}
+
+.profile-icon {
+  aspect-ratio: 1;
+  object-fit: contain;
+  object-position: center;
+  width: 44px;
+  border-radius: 14px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.section-title {
+  align-self: start;
+  margin-top: 13px;
+  flex-basis: auto;
+}
+
+.user-name {
+  font-size: 24px;
+  align-self: center;
+  margin-top: 18px;
+}
+
+.trip-card {
+  border-radius: 1000px;
+  background-color: rgba(250, 250, 250, 0.7);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  display: flex;
+  margin-top: 43px;
+  align-items: start;
+  gap: 20px;
+  justify-content: space-between;
+  padding: 37px 53px 37px 23px;
+}
+
+.trip-route {
+  display: flex;
+  gap: 5px;
+}
+
+.city-name {
+  flex-grow: 1;
+}
+
+.route-icon {
+  aspect-ratio: 1.8;
+  object-fit: contain;
+  object-position: center;
+  width: 27px;
+  margin: auto 0;
+}
+
+.trip-rating {
+  display: flex;
+  gap: 4px;
+  white-space: nowrap;
+}
+
+.star-icon {
+  aspect-ratio: 1.12;
+  object-fit: contain;
+  object-position: center;
+  width: 18px;
+  align-self: start;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+</style>
+
+<section class="historico-viagens-caronista">
+  <header class="header">
+    <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/8e1885447c0a2e9114105058357adeae41e7ec72c458dddf8bdf15252a83cd56?placeholderIfAbsent=true&apiKey=697a69656cc744ecb96f7144267d8a2a" class="profile-icon" alt="Profile icon" />
+    <h1 class="section-title">Histórico Caronista</h1>
+  </header>
+  <h2 class="user-name">Heitor Colichio</h2>
+  <article class="trip-card">
+    <div class="trip-route">
+      <span class="city-name">São Carlos</span>
+      <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/ceb3016e5ac04436d975b9e28f6516b0f17013d1939741b40073b35ea83703fd?placeholderIfAbsent=true&apiKey=697a69656cc744ecb96f7144267d8a2a" class="route-icon" alt="Route icon" />
+      <span class="city-name">São Paulo</span>
+    </div>
+    <div class="trip-rating">
+      <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/ddea3ead809d8c7818ab427884ac63d5323129004a854f0b68f1414c805fc8a1?placeholderIfAbsent=true&apiKey=697a69656cc744ecb96f7144267d8a2a" class="star-icon" alt="Star icon" />
+      <span>4.8</span>
+    </div>
+  </article>
+  <article class="trip-card">
+    <div class="trip-route">
+      <span class="city-name">São Carlos</span>
+      <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/ceb3016e5ac04436d975b9e28f6516b0f17013d1939741b40073b35ea83703fd?placeholderIfAbsent=true&apiKey=697a69656cc744ecb96f7144267d8a2a" class="route-icon" alt="Route icon" />
+      <span class="city-name">São Paulo</span>
+    </div>
+    <div class="trip-rating">
+      <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/ddea3ead809d8c7818ab427884ac63d5323129004a854f0b68f1414c805fc8a1?placeholderIfAbsent=true&apiKey=697a69656cc744ecb96f7144267d8a2a" class="star-icon" alt="Star icon" />
+      <span>5.0</span>
+    </div>
+  </article>
+  <article class="trip-card">
+    <div class="trip-route">
+      <span class="city-name">São Carlos</span>
+      <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/ceb3016e5ac04436d975b9e28f6516b0f17013d1939741b40073b35ea83703fd?placeholderIfAbsent=true&apiKey=697a69656cc744ecb96f7144267d8a2a" class="route-icon" alt="Route icon" />
+      <span class="city-name">São Paulo</span>
+    </div>
+    <div class="trip-rating">
+      <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/ddea3ead809d8c7818ab427884ac63d5323129004a854f0b68f1414c805fc8a1?placeholderIfAbsent=true&apiKey=697a69656cc744ecb96f7144267d8a2a" class="star-icon" alt="Star icon" />
+      <span>4.9</span>
+    </div>
+  </article>
+</section>
