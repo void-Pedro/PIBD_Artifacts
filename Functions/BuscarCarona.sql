@@ -21,5 +21,3 @@ BEGIN
         	AND v.Numero_max_pessoas >= NumPassageiro;	 
 RETURN ccarona;	 
 END;
-/
-

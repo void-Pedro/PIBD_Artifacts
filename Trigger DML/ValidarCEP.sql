@@ -1,5 +1,5 @@
 CREATE TRIGGER trg_ValidarCEP
-ON PontosDeInteresse
+ON dbo.pontos_intermediarios
 FOR INSERT, UPDATE
 AS
 BEGIN
@@ -10,7 +10,7 @@ BEGIN
            OR i.CEP LIKE '%[^0-9]%'
     )
     BEGIN
-        RAISERROR('O CEP digitado é inválido. Inclua apenas números', 16, 1)
+        RAISERROR('O CEP digitado é inválido. Inclua apenas números ou verifique o tamanho', 16, 1)
         ROLLBACK TRANSACTION
     END
 END
