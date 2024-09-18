@@ -1,18 +1,22 @@
---Verificação de cadastro utilizando passaporte
-
-CREATE OR REPLACE TRIGGER trg_Verifica_Cadastro_Passaporte
-	BEFORE INSERT
-	ON Estrangeiro
-	FOR EACH ROW
-DECLARE
-	cont NUMBER;
+CREATE TRIGGER trg_Verifica_Cadastro_Passaporte
+ON Estrangeiro
+AFTER INSERT
+AS
 BEGIN
-    SELECT COUNT(*) INTO cont
-    FROM Estrangeiro e
-    WHERE e.Numero_Passaporte = :NEW.Numero_Passaporte;
+    -- Variável para armazenar o número de passaportes duplicados
+    DECLARE @cont INT;
 
-    IF cont > 0 THEN
-        RAISE_APPLICATION_ERROR(-20003, 'Erro: Já existe um usuário com o mesmo núnero de passaporte.');
-    END IF;
+    -- Verifica se o número de passaporte do registro inserido já existe na tabela
+    SELECT @cont = COUNT(*)
+    FROM Estrangeiro e
+    INNER JOIN inserted i ON e.Numero_Passaporte = i.Numero_Passaporte;
+
+    -- Se houver duplicidade, lança um erro
+    IF @cont > 1
+    BEGIN
+        -- Lançar uma exceção para impedir a inserção
+        RAISERROR('Erro: Já existe um usuário com o mesmo número de passaporte.', 16, 1);
+        ROLLBACK TRANSACTION;
+    END
 END;
-/
+GO

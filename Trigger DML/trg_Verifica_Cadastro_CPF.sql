@@ -1,18 +1,21 @@
---Verificação de cadastro utilizando CPF
-
-CREATE OR REPLACE TRIGGER trg_Verifica_Cadastro_CPF
-	BEFORE INSERT
-	ON Brasileiro
-	FOR EACH ROW
-DECLARE
-	cont NUMBER;
+CREATE TRIGGER trg_Verifica_Cadastro_CPF
+ON Brasileiro
+AFTER INSERT
+AS
 BEGIN
-    SELECT COUNT(*) INTO cont
-    FROM Brasileiro b
-    WHERE b.CPF = :NEW.CPF;
+    -- Variável para armazenar o número de CPFs duplicados
+    DECLARE @cont INT;
 
-    IF cont > 0 THEN
-        RAISE_APPLICATION_ERROR(-20002, 'Erro: Já existe um usuário com o mesmo CPF.');
-    END IF;
+    -- Verifica se o CPF do registro inserido já existe na tabela
+    SELECT @cont = COUNT(*)
+    FROM Brasileiro b
+    INNER JOIN inserted i ON b.CPF = i.CPF;
+
+    -- Se houver duplicidade, lança um erro
+    IF @cont > 1
+    BEGIN
+        -- Lançar uma exceção para impedir a inserção
+        RAISERROR('Erro: Já existe um usuário com o mesmo CPF.', 16, 1);
+        ROLLBACK TRANSACTION;
+    END
 END;
-/
