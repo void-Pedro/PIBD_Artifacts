@@ -68,6 +68,138 @@ app.post('/carros', (req, res) => {
     connection.connect();
 });
 
+
+
+// Rota para obter informações de viagens em andamento
+app.get('/AcompanharCarona', async (req, res) => {
+    try {
+      const result = await pool.request().query(`
+        SELECT
+          ID_viagem,
+          valor,
+          data_hora_saida AS start_time,
+          data_hora_chegada_estimada AS end_time,
+          status_viagem AS status,
+          car_model,
+          license_plate,
+          driver_name,
+          car_color
+        FROM vw_viagem
+      `);
+      res.json(result.recordset);
+    } catch (err) {
+      console.error('Erro ao buscar dados:', err);
+      res.status(500).send('Erro ao buscar dados');
+    }
+  });
+
+  app.post('/acompanhar-carona', (req, res) => {
+    const { caronista_ID } = req.body;
+    const connection = createConnection();
+
+    connection.on('connect', err => {
+        if (err) {
+            console.error('Erro ao conectar ao SQL Server:', err);
+            res.status(500).send('Erro ao conectar ao SQL Server');
+            return;
+        }
+        console.log('Conectado ao SQL Server.');
+
+        const request = new Request('AcompanharCarona', (err, rowCount, rows) => {
+            if (err) {
+                console.error('Erro ao executar a procedure:', err);
+                res.status(500).send('Erro ao buscar caronas: ' + err.message);
+            } else {
+                const caronas = [];
+                rows.forEach(row => {
+                    const carona = {};
+                    row.forEach(column => {
+                        carona[column.metadata.colName] = column.value;
+                    });
+                    caronas.push(carona);
+                });
+                res.json(caronas);
+            }
+            connection.close();
+        });
+
+        request.addParameter('caronista_ID', TYPES.VarChar, caronista_ID);
+
+        request.setSql('EXEC GetViagemCaronista @caronista_ID');
+        connection.execSql(request);
+    });
+
+    connection.connect();
+});
+
+
+app.post('/ofertar-caronas', (req, res) => {
+    const {
+        ID_caronista, Renavam, Valor, Data_hora_saida, Data_hora_chegada_estimada, Status_viagem, Numero_max_pessoas,
+        pontos_intermediarios
+    } = req.body;
+
+    const connection = createConnection();
+
+    connection.on('connect', err => {
+        if (err) {
+            console.error('Erro ao conectar ao SQL Server:', err);
+            res.status(500).send('Erro ao conectar ao SQL Server');
+            return;
+        }
+        console.log('Conectado ao SQL Server.');
+
+        const request = new Request('OfertarCaronas', (err, rowCount, rows) => {
+            if (err) {
+                console.error('Erro ao cadastrar a viagem:', err);
+                res.status(500).send('Erro ao cadastrar viagem: ' + err.message);
+            } else {
+                const viagemId = rows[0].ID_viagem;
+
+                pontos_intermediarios.forEach(ponto => {
+                    const { CEP, rua, numero, data_chegada, horario_chegada, horario_saida } = ponto;
+
+                    const pontoRequest = new Request('InserirPontoIntermediarioExistente', (err, rowCount, rows) => {
+                        if (err) {
+                            console.error('Erro ao inserir ponto intermediário:', err);
+                            res.status(500).send('Erro ao inserir ponto intermediário: ' + err.message);
+                            return;
+                        }
+                        console.log('Ponto intermediário inserido com sucesso.');
+                    });
+
+                    pontoRequest.addParameter('p_id_viagem', TYPES.Int, viagemId);
+                    pontoRequest.addParameter('p_CEP', TYPES.Int, CEP);
+                    pontoRequest.addParameter('p_rua', TYPES.Int, rua);
+                    pontoRequest.addParameter('p_numero', TYPES.Int, numero);
+                    pontoRequest.addParameter('p_data_chegada', TYPES.Date, new Date(data_chegada));
+                    pontoRequest.addParameter('p_horario_chegada', TYPES.Time, horario_chegada);
+                    pontoRequest.addParameter('p_horario_saida', TYPES.Time, horario_saida);
+
+                    connection.execSql(pontoRequest);
+                });
+
+                res.json({ message: 'Viagem e pontos intermediários cadastrados com sucesso.' });
+            }
+
+            connection.close();
+        });
+
+        request.addParameter('ID_caronista', TYPES.Int, ID_caronista);
+        request.addParameter('Renavam', TYPES.Int, Renavam);
+        request.addParameter('Valor', TYPES.Decimal, Valor);
+        request.addParameter('Data_hora_saida', TYPES.DateTime, new Date(Data_hora_saida));
+        request.addParameter('Data_hora_chegada_estimada', TYPES.DateTime, new Date(Data_hora_chegada_estimada));
+        request.addParameter('Status_viagem', TYPES.VarChar, Status_viagem);
+        request.addParameter('Numero_max_pessoas', TYPES.Int, Numero_max_pessoas);
+
+        request.setSql('EXEC CadastrarViagem @ID_caronista, @Renavam, @Valor, @Data_hora_saida, @Data_hora_chegada_estimada, @Status_viagem, @Numero_max_pessoas');
+        connection.execSql(request);
+    });
+
+    connection.connect();
+});
+
 // Inicializa o servidor na porta 3000
 app.listen(3000, () => {
     console.log('Servidor rodando na porta 3000.');
