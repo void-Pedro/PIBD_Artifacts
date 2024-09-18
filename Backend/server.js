@@ -200,6 +200,50 @@ app.post('/ofertar-caronas', (req, res) => {
     connection.connect();
 });
 
+//Rota para buscar caronas disponíveis
+app.post('/buscar-caronas', (req, res) => {
+    const { Cidade_saida, DataSaida, Cidade_chegada, NumPassageiro } = req.body;
+    const connection = createConnection();
+
+    connection.on('connect', err => {
+        if (err) {
+            console.error('Erro ao conectar ao SQL Server:', err);
+            res.status(500).send('Erro ao conectar ao SQL Server');
+            return;
+        }
+        console.log('Conectado ao SQL Server.');
+
+        const request = new Request('BuscarCarona', (err, rowCount, rows) => {
+            if (err) {
+                console.error('Erro ao executar a procedure:', err);
+                res.status(500).send('Erro ao buscar caronas: ' + err.message);
+            } else {
+                const caronas = [];
+                rows.forEach(row => {
+                    const carona = {};
+                    row.forEach(column => {
+                        carona[column.metadata.colName] = column.value;
+                    });
+                    caronas.push(carona);
+                });
+                res.json(caronas);
+            }
+            connection.close();
+        });
+        
+        request.addParameter('Cidade_saida', TYPES.VarChar, Cidade_saida);
+        request.addParameter('DataSaida', TYPES.Date, DataSaida);
+        request.addParameter('Cidade_chegada', TYPES.VarChar, Cidade_chegada);
+        request.addParameter('NumPassageiro', TYPES.Int, NumPassageiro);
+
+        request.setSql('EXEC BuscarCarona @Cidade_saida, @DataSaida, @Cidade_chegada, @NumPassageiro');
+        connection.execSql(request);
+    });
+
+    connection.connect();
+});
+
+
 // Inicializa o servidor na porta 3000
 app.listen(3000, () => {
     console.log('Servidor rodando na porta 3000.');
