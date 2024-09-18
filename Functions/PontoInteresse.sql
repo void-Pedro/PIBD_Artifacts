@@ -1,13 +1,18 @@
---Se for diferente para cada usuário
-
+--Ponto de interesse de um usuário associado a uma viagem 
 CREATE OR REPLACE FUNCTION Ponto_Interesse( 
-    user_id IN NUMBER) 
-	RETURN SYS_REFCURSOR 
-IS 
-	cponto SYS_REFCURSOR;  
-BEGIN  
-	OPEN cponto FOR 
-		SELECT endereco FROM Usuario_Pontos_Interesse 
-		WHERE usuario_id = user_id; 
-	RETURN cponto; 
-END;
+   @user_id INT)
+RETURNS TABLE
+AS
+RETURN(
+    SELECT 
+        pis.CEP,
+        pis.rua,
+        pis.numero,
+        pis.bairro,
+        pis.cidade,
+        pis.estado
+    FROM pontos_intermediarios pis
+	JOIN ponto_intermediario_viagem piv ON piv.CEP_ponto = pis.CEP
+	JOIN caroneiro_viagem cv ON cv.ID_viagem = piv.ID_viagem
+	WHERE cv.caroneiro_ID = @user_id
+);
