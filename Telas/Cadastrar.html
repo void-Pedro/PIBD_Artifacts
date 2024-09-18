@@ -65,15 +65,17 @@
 }
 </style>
 
-<section class="registration-container"> 
+<section class="registration-container">
   <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/e34ae66710bcc589bfb2a44ca93c05123746f1a3512c16fe8390b66e1078b5ae?placeholderIfAbsent=true&apiKey=9dfda23d791048169a80340690397d74" alt="Registration illustration" class="registration-image" />
   <h2 class="registration-title">Registre-se para usufruir do <br /> melhor aplicativo de caronas!</h2>
   <form>
     <label for="registration-cpf" class="visually-hidden">Registrar usando CPF</label>
-    <button onclick="window.location.href='CadastrarCPF.html';" id="registration-cpf" type="button" class="registration-button registration-button-primary">Usando CPF</button>
-    
+    <a href=CadastrarCPF.html>
+      <button id="registration-cpf" type="button" class="registration-button registration-button-primary">Usando CPF</button>
+    </a>
     <label for="registration-passport" class="visually-hidden">Registrar usando Passaporte</label>
-    <button onclick="window.location.href='CadastrarPassaporte.html';" id="registration-passport" type="button" class="registration-button registration-button-secondary">Usando Passaporte</button>
-  </form>
+    <a href=CadastrarPassaporte.html>
+      <button id="registration-passport" type="button" class="registration-button registration-button-secondary">Usando Passaporte</button>
+    </a>
+    </form>
 </section>
-

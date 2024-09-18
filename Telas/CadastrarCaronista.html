@@ -1,166 +1,170 @@
 <style>
-.cadastra-caronista {
-  border-radius: 30px;
-  background-color: #fff;
-  box-shadow: 0 4px 10px 5px rgba(0, 0, 0, 0.25);
-  display: flex;
-  max-width: 480px;
-  width: 100%;
-  padding-bottom: 161px;
-  flex-direction: column;
-  overflow: hidden;
-  margin: 0 auto;
-  font: 700 20px DM Sans, sans-serif;
-}
-
-.logo-icon {
-  aspect-ratio: 1.17;
-  object-fit: contain;
-  object-position: center;
-  width: 14px;
-  margin-top: 4px;
-}
-
-.content-wrapper {
-  display: flex;
-  margin-top: 28px;
-  width: 100%;
-  flex-direction: column;
-  align-items: center;
-  padding: 0 23px;
-}
-
-.header {
-  align-self: start;
-  display: flex;
-  width: 281px;
-  max-width: 100%;
-  gap: 40px 54px;
-  color: #000;
-  white-space: nowrap;
-  text-align: center;
-  letter-spacing: -1px;
-  font: 400 32px Unlock, sans-serif;
-}
-
-.header-icon {
-  aspect-ratio: 1;
-  object-fit: contain;
-  object-position: center;
-  width: 44px;
-  border-radius: 14px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-}
-
-.header-title {
-  flex-grow: 1;
-  width: 172px;
-  margin: auto 0;
-}
-
-.main-title {
-  color: #000;
-  font-size: 40px;
-  text-align: center;
-  margin-top: 36px;
-}
-
-.subtitle {
-  color: #979797;
-  line-height: 1.2;
-  letter-spacing: -1px;
-  margin-top: 12px;
-}
-
-.input-group {
-  align-self: stretch;
-  display: flex;
-  margin-top: 55px;
-  gap: 12px;
-  font-size: 13px;
-  color: #979797;
-  text-align: center;
-}
-
-.input-field {
-  border-radius: 24px;
-  background-color: #fff;
-  padding: 25px 20px;
-}
-
-.input-group-secondary {
-  align-self: stretch;
-  display: flex;
-  margin-top: 16px;
-  gap: 14px;
-  font-size: 13px;
-  color: #979797;
-  text-align: center;
-}
-
-.cta-button {
-  border-radius: 24px;
-  background-color: #000;
-  display: flex;
-  margin-top: 126px;
-  width: 100%;
-  max-width: 305px;
-  gap: 13px;
-  color: #fff;
-  white-space: nowrap;
-  text-align: center;
-  padding: 16px 61px;
-}
-
-.cta-icon {
-  aspect-ratio: 1;
-  object-fit: contain;
-  object-position: center;
-  width: 20px;
-  margin: auto 0;
-}
-
-.secondary-button {
-  border-radius: 24px;
-  background-color: #d8d8d8;
-  margin-top: 36px;
-  width: 100%;
-  max-width: 305px;
-  color: #1f0808;
-  text-align: center;
-  padding: 16px 70px;
-}
-</style>
-
-<section class="cadastra-caronista">
-  <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/6ba3f97fd274cff9a16b2c8a50a8187ed67250ee26b68d926bbcf309e311ba52?placeholderIfAbsent=true&apiKey=9dfda23d791048169a80340690397d74" class="logo-icon" alt="" />
-  <div class="content-wrapper">
-    <header class="header">
-      <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/8e1885447c0a2e9114105058357adeae41e7ec72c458dddf8bdf15252a83cd56?placeholderIfAbsent=true&apiKey=9dfda23d791048169a80340690397d74" class="header-icon" alt="" />
-      <h1 class="header-title">SANCaronas</h1>
-    </header>
-    <h2 class="main-title">
-      Comece a ofertar <br /> caronas!
-    </h2>
-    <p class="subtitle">Só nos dê algumas informações...</p>
-    <form>
-      <div class="input-group">
-        <label for="fullName" class="visually-hidden">Nome completo</label>
-        <input type="text" id="fullName" class="input-field" placeholder="Nome completo" aria-label="Nome completo" />
-        <label for="birthDate" class="visually-hidden">Data de nascimento</label>
-        <input type="date" id="birthDate" class="input-field" placeholder="Data de nascimento" aria-label="Data de nascimento" />
-      </div>
-      <div class="input-group-secondary">
-        <label for="cnh" class="visually-hidden">CNH</label>
-        <input type="text" id="cnh" class="input-field" placeholder="CNH" aria-label="CNH" />
-        <label for="validityDate" class="visually-hidden">Data de Validade</label>
-        <input type="date" id="validityDate" class="input-field" placeholder="Data de Validade" aria-label="Data de Validade" />
-      </div>
-      <button type="submit" class="cta-button">
-        <span>Avançar</span>
-        <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/bc854d34e8bb081d8beea84e51c3512a6cf671d17b43cbf7ff531c3c1bcb21be?placeholderIfAbsent=true&apiKey=9dfda23d791048169a80340690397d74" class="cta-icon" alt="" />
-      </button>
-    </form>
-    <button class="secondary-button">Agora não</button>
-  </div>
-</section>
+  .cadastra-caronista {
+    border-radius: 30px;
+    background-color: #fff;
+    box-shadow: 0 4px 10px 5px rgba(0, 0, 0, 0.25);
+    display: flex;
+    max-width: 480px;
+    width: 100%;
+    padding-bottom: 161px;
+    flex-direction: column;
+    overflow: hidden;
+    margin: 0 auto;
+    font: 700 20px DM Sans, sans-serif;
+  }
+  
+  .logo-icon {
+    aspect-ratio: 1.17;
+    object-fit: contain;
+    object-position: center;
+    width: 14px;
+    margin-top: 4px;
+  }
+  
+  .content-wrapper {
+    display: flex;
+    margin-top: 28px;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 23px;
+  }
+  
+  .header {
+    align-self: start;
+    display: flex;
+    width: 281px;
+    max-width: 100%;
+    gap: 40px 54px;
+    color: #000;
+    white-space: nowrap;
+    text-align: center;
+    letter-spacing: -1px;
+    font: 400 32px Unlock, sans-serif;
+  }
+  
+  .header-icon {
+    aspect-ratio: 1;
+    object-fit: contain;
+    object-position: center;
+    width: 44px;
+    border-radius: 14px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  }
+  
+  .header-title {
+    flex-grow: 1;
+    width: 172px;
+    margin: auto 0;
+  }
+  
+  .main-title {
+    color: #000;
+    font-size: 40px;
+    text-align: center;
+    margin-top: 36px;
+  }
+  
+  .subtitle {
+    color: #979797;
+    line-height: 1.2;
+    letter-spacing: -1px;
+    margin-top: 12px;
+  }
+  
+  .input-group {
+    align-self: stretch;
+    display: flex;
+    margin-top: 55px;
+    gap: 12px;
+    font-size: 13px;
+    color: #979797;
+    text-align: center;
+  }
+  
+  .input-field {
+    border-radius: 24px;
+    background-color: #fff;
+    padding: 25px 20px;
+  }
+  
+  .input-group-secondary {
+    align-self: stretch;
+    display: flex;
+    margin-top: 16px;
+    gap: 14px;
+    font-size: 13px;
+    color: #979797;
+    text-align: center;
+  }
+  
+  .cta-button {
+    border-radius: 24px;
+    background-color: #000;
+    display: flex;
+    margin-top: 126px;
+    width: 100%;
+    max-width: 305px;
+    gap: 13px;
+    color: #fff;
+    white-space: nowrap;
+    text-align: center;
+    padding: 16px 61px;
+  }
+  
+  .cta-icon {
+    aspect-ratio: 1;
+    object-fit: contain;
+    object-position: center;
+    width: 20px;
+    margin: auto 0;
+  }
+  
+  .secondary-button {
+    border-radius: 24px;
+    background-color: #d8d8d8;
+    margin-top: 36px;
+    width: 100%;
+    max-width: 305px;
+    color: #1f0808;
+    text-align: center;
+    padding: 16px 70px;
+  }
+  </style>
+  
+  <section class="cadastra-caronista">
+    <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/6ba3f97fd274cff9a16b2c8a50a8187ed67250ee26b68d926bbcf309e311ba52?placeholderIfAbsent=true&apiKey=9dfda23d791048169a80340690397d74" class="logo-icon" alt="" />
+    <div class="content-wrapper">
+      <header class="header">
+        <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/8e1885447c0a2e9114105058357adeae41e7ec72c458dddf8bdf15252a83cd56?placeholderIfAbsent=true&apiKey=9dfda23d791048169a80340690397d74" class="header-icon" alt="" />
+        <h1 class="header-title">SANCaronas</h1>
+      </header>
+      <h2 class="main-title">
+        Comece a ofertar <br /> caronas!
+      </h2>
+      <p class="subtitle">Só nos dê algumas informações...</p>
+      <form>
+        <div class="input-group">
+          <label for="fullName" class="visually-hidden">Nome completo</label>
+          <input type="text" id="fullName" class="input-field" placeholder="Nome completo" aria-label="Nome completo" />
+          <label for="birthDate" class="visually-hidden">Data de nascimento</label>
+          <input type="date" id="birthDate" class="input-field" placeholder="Data de nascimento" aria-label="Data de nascimento" />
+        </div>
+        <div class="input-group-secondary">
+          <label for="cnh" class="visually-hidden">CNH</label>
+          <input type="text" id="cnh" class="input-field" placeholder="CNH" aria-label="CNH" />
+          <label for="validityDate" class="visually-hidden">Data de Validade</label>
+          <input type="date" id="validityDate" class="input-field" placeholder="Data de Validade" aria-label="Data de Validade" />
+        </div>
+        <a href=CadastrarVeiculos.html>
+          <button type="button" class="cta-button">
+            <span>Avançar</span>
+            <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/bc854d34e8bb081d8beea84e51c3512a6cf671d17b43cbf7ff531c3c1bcb21be?placeholderIfAbsent=true&apiKey=9dfda23d791048169a80340690397d74" class="cta-icon" alt="" />
+          </button>
+        </a>
+      </form>
+      <a href="ProcurarCaronas.html">
+        <button class="secondary-button">Agora não</button>
+      </a>
+    </div>
+  </section>
