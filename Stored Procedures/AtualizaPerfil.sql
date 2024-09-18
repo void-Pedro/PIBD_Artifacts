@@ -16,6 +16,7 @@ BEGIN
 			DDD = COALESCE(@DDD, DDD),
 			num_telefone = COALESCE(@NumTelefone, num_telefone)
 		WHERE ID = @ID_usuario;
+		PRINT 'Perfil atualizado com sucesso';
 	END TRY
 
 	--Se der erro
