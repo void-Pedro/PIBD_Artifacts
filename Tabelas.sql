@@ -144,7 +144,19 @@ CREATE TABLE solicita_viagem (
 );
 GO
 
-CREATE TABLE avaliacao (
+CREATE TABLE avaliacaoCaronista (
+	ID_caroneiro INT NOT NULL,
+	ID_viagem INT NOT NULL,
+	nota INT NOT NULL,
+	comentario VARCHAR(200),
+
+	PRIMARY KEY(ID_caroneiro, ID_viagem),
+	FOREIGN KEY (ID_caroneiro) REFERENCES caroneiro(caroneiro_ID),
+    FOREIGN KEY (ID_viagem) REFERENCES viagem(ID_viagem)
+);
+GO
+
+CREATE TABLE avaliacaoCaroneiro (
 	ID_caroneiro INT NOT NULL,
 	ID_viagem INT NOT NULL,
 	nota INT NOT NULL,
