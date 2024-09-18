@@ -1,4 +1,4 @@
---Ponto de interesse de um usuário associado a uma viagem 
+--Ponto de interesse de um usuário(que dirige) associado a uma viagem 
 CREATE OR REPLACE FUNCTION Ponto_Interesse( 
    @user_id INT)
 RETURNS TABLE
