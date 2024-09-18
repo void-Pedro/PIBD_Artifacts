@@ -12,7 +12,7 @@ CREATE TABLE usuario_geral (
    num_telefone INT NOT NULL,
 
    nome_completo VARCHAR(100) NOT NULL,
-   sexo VARCHAR(100) NOT NULL,
+   senha VARCHAR(100) NOT NULL,
    data_nascimento VARCHAR(100) NOT NULL,
    sexo VARCHAR(100) NOT NULL,
    PRIMARY KEY (ID)
