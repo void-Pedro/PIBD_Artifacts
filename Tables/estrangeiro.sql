@@ -2,7 +2,7 @@
 
 CREATE TABLE IF NOT EXISTS estrangeiro (
 	ID_usuario INT NOT NULL,
-	validade_passaporte VARCHAR(50) NOT NULL,
+	validade_passaporte date NOT NULL,
 	numero_passaporte VARCHAR(50) NOT NULL,
 	Senha VARCHAR(50) NOT NULL,
 
