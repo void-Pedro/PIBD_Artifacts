@@ -1,6 +1,6 @@
---Função que retorna caronas disponíveis
+--Função não funciona no SQL Server
 
-CREATE OR REPLACE FUNCTION BuscarCarona(
+/*CREATE OR REPLACE FUNCTION BuscarCarona(
 	Cidade_saida IN VARCHAR2,
 	DataSaida IN DATE,
 	Cidade_chegada IN VARCHAR2,
@@ -18,4 +18,26 @@ BEGIN
         	AND v.Data_saida = DataSaida	 
         	AND v.Numero_max_pessoas >= NumPassageiro;	 
 RETURN ccarona;	 
+END; */
+
+
+--Busca Carona 
+CREATE PROCEDURE BuscarCarona
+    @Cidade_saida NVARCHAR(100),
+    @DataSaida DATE,
+    @Cidade_chegada NVARCHAR(100),
+    @NumPassageiro INT
+AS
+BEGIN
+    SELECT 
+        pis.cidade,  
+        v.data_hora_saida,  
+        v.numero_max_pessoas, 
+        v.valor  
+    FROM Viagem v
+    JOIN ponto_intermediario_viagem piv ON v.ID_viagem = piv.ID_viagem
+	JOIN pontos_intermediarios pis ON pis.CEP = piv.CEP_ponto
+    WHERE pis.cidade IN (@Cidade_saida, @Cidade_chegada)
+      AND v.data_hora_saida = @DataSaida
+      AND v.Numero_max_pessoas >= @NumPassageiro;
 END;
