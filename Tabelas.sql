@@ -19,7 +19,7 @@ CREATE TABLE usuario_geral (
 GO
 
 CREATE TABLE estrangeiro (
-   ID_usuario INT NOT NULL,
+   ID_usuario INT,
    validade_passaporte VARCHAR(50) NOT NULL,
    numero_passaporte VARCHAR(50) NOT NULL,
    Senha VARCHAR(50) NOT NULL,
@@ -30,7 +30,7 @@ CREATE TABLE estrangeiro (
 GO
 
 CREATE TABLE brasileiro (
-   ID_usuario INT NOT NULL,
+   ID_usuario INT,
    CPF VARCHAR(50) NOT NULL,
    Senha VARCHAR(50) NOT NULL,
 
