@@ -1,0 +1,139 @@
+<style>
+.edit-profile {
+  border-radius: 30px;
+  background-color: #fff;
+  box-shadow: 0 4px 10px 5px rgba(0, 0, 0, 0.25);
+  display: flex;
+  max-width: 480px;
+  width: 100%;
+  flex-direction: column;
+  overflow: hidden;
+  color: #979797;
+  text-align: center;
+  margin: 0 auto;
+  padding: 44px 22px 255px;
+  font: 700 13px DM Sans, sans-serif;
+}
+
+.profile-image {
+  aspect-ratio: 1;
+  object-fit: contain;
+  object-position: center;
+  width: 44px;
+  border-radius: 14px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.section-title {
+  color: #000;
+  font-size: 36px;
+  letter-spacing: -1.44px;
+  align-self: center;
+  margin-top: 12px;
+}
+
+.info-row {
+  display: flex;
+  margin-top: 43px;
+  gap: 18px;
+}
+
+.info-item {
+  border-radius: 24px;
+  background-color: #fff;
+  padding: 26px 22px;
+}
+
+.info-item-small {
+  border-radius: 24px;
+  background-color: #fff;
+  padding: 25px 17px;
+  white-space: nowrap;
+}
+
+.phone-row {
+  display: flex;
+  margin-top: 14px;
+  width: 100%;
+  gap: 20px;
+  white-space: nowrap;
+  justify-content: space-between;
+}
+
+.phone-group {
+  display: flex;
+  gap: 8px;
+}
+
+.phone-item {
+  border-radius: 24px;
+  background-color: #fff;
+  width: 61px;
+  height: 61px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-row {
+  display: flex;
+  margin-top: 22px;
+  align-items: start;
+  gap: 17px;
+  white-space: nowrap;
+}
+
+.document-row {
+  align-self: start;
+  display: flex;
+  margin-top: 13px;
+  gap: 12px;
+  white-space: nowrap;
+}
+
+.document-item {
+  border-radius: 24px;
+  background-color: #fff;
+  padding: 26px 13px;
+  border: 1px solid #000;
+}
+
+.update-button {
+  border-radius: 24px;
+  background-color: #000;
+  align-self: center;
+  margin-top: 98px;
+  width: 100%;
+  max-width: 305px;
+  font-size: 20px;
+  color: #fff;
+  white-space: nowrap;
+  padding: 16px 70px;
+  cursor: pointer;
+}
+</style>
+
+<section class="edit-profile">
+  <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/8e1885447c0a2e9114105058357adeae41e7ec72c458dddf8bdf15252a83cd56?placeholderIfAbsent=true&apiKey=9dfda23d791048169a80340690397d74" alt="Profile picture" class="profile-image" />
+  <h1 class="section-title">Informações da conta</h1>
+  <div class="info-row">
+    <p class="info-item">Heitor Colichio</p>
+    <p class="info-item-small">01/01/2000</p>
+  </div>
+  <div class="phone-row">
+    <div class="phone-group">
+      <span class="phone-item">+55</span>
+      <span class="phone-item">11</span>
+    </div>
+    <p class="info-item-small">1234-5678</p>
+  </div>
+  <div class="social-row">
+    <p class="info-item">Sexo</p>
+    <p class="info-item-small">Instagram</p>
+  </div>
+  <div class="document-row">
+    <p class="info-item">Facebook</p>
+    <p class="document-item">Documento</p>
+  </div>
+  <button class="update-button">Atualizar</button>
+</section>
