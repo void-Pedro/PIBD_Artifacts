@@ -152,3 +152,4 @@ CREATE TABLE avaliacao (
 	FOREIGN KEY (ID_caroneiro) REFERENCES caroneiro(caroneiro_ID),
     FOREIGN KEY (ID_viagem) REFERENCES viagem(ID_viagem)
 );
+GO

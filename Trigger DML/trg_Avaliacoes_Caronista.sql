@@ -11,4 +11,3 @@ BEGIN
     FROM caronista c INNER JOIN AvaliacoesCaronista ac
     ON c.ID_caronista = ac.caroneiroID;
 END;
-/
