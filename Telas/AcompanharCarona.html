@@ -1,0 +1,251 @@
+<style>
+.ride-info-container {
+  border-radius: 30px;
+  background-color: #fff;
+  box-shadow: 0 4px 10px 5px rgba(0, 0, 0, 0.25);
+  display: flex;
+  max-width: 480px;
+  width: 100%;
+  flex-direction: column;
+  overflow: hidden;
+  align-items: flex-start;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 700;
+  text-align: center;
+  margin: 0 auto;
+  padding: 44px 25px 379px;
+}
+
+.ride-icon {
+  aspect-ratio: 1;
+  object-fit: contain;
+  object-position: center;
+  width: 44px;
+  border-radius: 14px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.ride-title {
+  color: #000;
+  font-size: 32px;
+  letter-spacing: -1.28px;
+  align-self: center;
+  margin-top: 23px;
+}
+
+.ride-details {
+  border-radius: 28px;
+  background-color: rgba(250, 250, 250, 0.7);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  display: flex;
+  margin-top: 54px;
+  width: 100%;
+  flex-direction: column;
+  padding: 20px 21px 7px;
+}
+
+.ride-date {
+  align-self: flex-start;
+  display: flex;
+  gap: 6px;
+  font-size: 14px;
+  color: #979797;
+}
+
+.calendar-icon {
+  aspect-ratio: 1.33;
+  object-fit: contain;
+  object-position: center;
+  width: 20px;
+}
+
+.ride-info {
+  display: flex;
+  margin-top: 6px;
+  width: 100%;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.ride-times {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  font-size: 16px;
+  color: #000;
+  margin: auto 0;
+}
+
+.time-list {
+  display: flex;
+  flex-direction: column;
+  white-space: nowrap;
+}
+
+.end-time {
+  margin-top: 45px;
+}
+
+.route-icon {
+  aspect-ratio: 0.21;
+  object-fit: contain;
+  object-position: center;
+  width: 14px;
+  margin-top: 9px;
+}
+
+.locations {
+  display: flex;
+  flex-direction: column;
+}
+
+.destination {
+  align-self: flex-start;
+  margin-top: 45px;
+}
+
+.ride-details-right {
+  display: flex;
+  flex-direction: column;
+}
+
+.price-container {
+  display: flex;
+  padding-left: 19px;
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: 16px;
+  color: #000;
+}
+
+.payment-icon {
+  aspect-ratio: 1.69;
+  object-fit: contain;
+  object-position: center;
+  width: 61px;
+  margin: 48px 0 0 14px;
+}
+
+.driver-info {
+  align-self: flex-start;
+  display: flex;
+  gap: 10px;
+  white-space: nowrap;
+}
+
+.rating-container {
+  display: flex;
+  gap: 2px;
+  font-size: 12px;
+  color: #979797;
+  margin: auto 0;
+}
+
+.rating {
+  flex-grow: 1;
+}
+
+.star-icon {
+  aspect-ratio: 1.15;
+  object-fit: contain;
+  object-position: center;
+  width: 15px;
+}
+
+.driver-name {
+  color: #414141;
+  font-size: 15px;
+}
+
+.vehicle-info {
+  border-radius: 1000px;
+  background-color: rgba(250, 250, 250, 0.7);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: flex-start;
+  gap: 29px;
+  margin: 47px 0 0 10px;
+  padding: 26px 59px;
+}
+
+.car-icon {
+  aspect-ratio: 1;
+  object-fit: contain;
+  object-position: center;
+  width: 41px;
+}
+
+.vehicle-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.car-model {
+  color: #000;
+  font-size: 22px;
+  letter-spacing: -0.88px;
+}
+
+.license-plate {
+  color: rgba(0, 0, 0, 0.75);
+  font-size: 16px;
+  letter-spacing: -0.64px;
+  align-self: center;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+</style>
+
+<section class="ride-info-container">
+  <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/8e1885447c0a2e9114105058357adeae41e7ec72c458dddf8bdf15252a83cd56?placeholderIfAbsent=true&apiKey=697a69656cc744ecb96f7144267d8a2a" alt="Ride sharing icon" class="ride-icon" />
+  <h2 class="ride-title">Informações da Viagem</h2>
+  <div class="ride-details">
+    <div class="ride-date">
+      <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/9e08368e8714a0516b1eb8b0d4691e4008a28dfb263cab9e129a193f3e83be5e?placeholderIfAbsent=true&apiKey=697a69656cc744ecb96f7144267d8a2a" alt="Calendar icon" class="calendar-icon" />
+      <span>Sáb, 27 maio</span>
+    </div>
+    <div class="ride-info">
+      <div class="ride-times">
+        <ul class="time-list">
+          <li>16h</li>
+          <li class="end-time">19h</li>
+        </ul>
+        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/8e8cabf8925d50c3a7352fd53136a53c51f6e53f3099fac86677a3e6bfff07d7?placeholderIfAbsent=true&apiKey=697a69656cc744ecb96f7144267d8a2a" alt="Route icon" class="route-icon" />
+        <ul class="locations">
+          <li>São Carlos</li>
+          <li class="destination">São Paulo</li>
+        </ul>
+      </div>
+      <div class="ride-details-right">
+        <div class="price-container">
+          <span>R$ 50,00</span>
+          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/5df3dc9f2cea719f85b4b207afed0a94e3ca8304ff07096b05296290e0679466?placeholderIfAbsent=true&apiKey=697a69656cc744ecb96f7144267d8a2a" alt="Payment method icon" class="payment-icon" />
+        </div>
+        <div class="driver-info">
+          <div class="rating-container">
+            <span class="rating">4.8</span>
+            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/7d5fddc0a1cdffbbf9c984165390f808bf47c932e956045d74719d2aee37dd09?placeholderIfAbsent=true&apiKey=697a69656cc744ecb96f7144267d8a2a" alt="Star rating icon" class="star-icon" />
+          </div>
+          <span class="driver-name">Pedro</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="vehicle-info">
+    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/2b58e9538965f4cb9801b0b6df5c16706919d48c110dfa2e3e742708d154179c?placeholderIfAbsent=true&apiKey=697a69656cc744ecb96f7144267d8a2a" alt="Car icon" class="car-icon" />
+    <div class="vehicle-details">
+      <span class="car-model">Toyota Corolla</span>
+      <span class="license-plate">BRA2E19</span>
+    </div>
+  </div>
+</section>

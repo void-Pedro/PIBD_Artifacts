@@ -1,0 +1,115 @@
+<style>
+.points-of-interest-form {
+  border-radius: 30px;
+  background-color: #fff;
+  box-shadow: 0 4px 10px 5px rgba(0, 0, 0, 0.25);
+  display: flex;
+  max-width: 480px;
+  width: 100%;
+  flex-direction: column;
+  overflow: hidden;
+  color: #979797;
+  text-align: center;
+  margin: 0 auto;
+  padding: 44px 22px 255px;
+  font: 700 13px DM Sans, sans-serif;
+}
+
+.form-icon {
+  aspect-ratio: 1;
+  object-fit: contain;
+  object-position: center;
+  width: 44px;
+  border-radius: 14px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.form-title {
+  color: #000;
+  font-size: 36px;
+  letter-spacing: -1.44px;
+  align-self: center;
+  margin-top: 12px;
+}
+
+.form-row {
+  display: flex;
+  margin-top: 32px;
+  gap: 18px;
+  white-space: nowrap;
+}
+
+.form-input {
+  border-radius: 24px;
+  background-color: #fff;
+  box-shadow: 0 4px 50px rgba(0, 0, 0, 0.15);
+  padding: 26px 40px;
+}
+
+.form-submit {
+  border-radius: 24px;
+  background-color: #000;
+  align-self: center;
+  margin-top: 68px;
+  width: 100%;
+  max-width: 305px;
+  font-size: 20px;
+  color: #fff;
+  white-space: nowrap;
+  padding: 16px 70px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+</style>
+
+<section class="points-of-interest-form">
+  <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/8e1885447c0a2e9114105058357adeae41e7ec72c458dddf8bdf15252a83cd56?placeholderIfAbsent=true&apiKey=9dfda23d791048169a80340690397d74" class="form-icon" alt="" />
+  <h2 class="form-title">Pontos de Interesse</h2>
+  <form>
+    <div class="form-row">
+      <div>
+        <label for="cep" class="visually-hidden">CEP</label>
+        <input type="text" id="cep" class="form-input" placeholder="CEP" />
+      </div>
+      <div>
+        <label for="rua" class="visually-hidden">Rua</label>
+        <input type="text" id="rua" class="form-input" placeholder="Rua" />
+      </div>
+    </div>
+    <div class="form-row">
+      <div>
+        <label for="numero" class="visually-hidden">Número</label>
+        <input type="text" id="numero" class="form-input" placeholder="Número" />
+      </div>
+      <div>
+        <label for="complemento" class="visually-hidden">Complemento</label>
+        <input type="text" id="complemento" class="form-input" placeholder="Complemento" />
+      </div>
+    </div>
+    <div class="form-row">
+      <div>
+        <label for="bairro" class="visually-hidden">Bairro</label>
+        <input type="text" id="bairro" class="form-input" placeholder="Bairro" />
+      </div>
+      <div>
+        <label for="cidade" class="visually-hidden">Cidade</label>
+        <input type="text" id="cidade" class="form-input" placeholder="Cidade" />
+      </div>
+    </div>
+    <div>
+      <label for="estado" class="visually-hidden">Estado</label>
+      <input type="text" id="estado" class="form-input" placeholder="Estado" />
+    </div>
+    <button type="submit" class="form-submit">Cadastrar</button>
+  </form>
+</section>

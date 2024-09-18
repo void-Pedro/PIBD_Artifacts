@@ -1,0 +1,224 @@
+<style>
+.available-rides {
+  border-radius: 30px;
+  background-color: #fff;
+  box-shadow: 0 4px 10px 5px rgba(0, 0, 0, 0.25);
+  display: flex;
+  max-width: 480px;
+  width: 100%;
+  flex-direction: column;
+  overflow: hidden;
+  align-items: flex-start;
+  font-family: DM Sans, sans-serif;
+  font-weight: 700;
+  text-align: center;
+  margin: 0 auto;
+  padding: 44px 24px 391px;
+}
+
+.header-container {
+  display: flex;
+  gap: 38px;
+  font-size: 29px;
+  color: #000;
+  letter-spacing: -1.16px;
+}
+
+.header-icon {
+  aspect-ratio: 1;
+  object-fit: contain;
+  object-position: center;
+  width: 44px;
+  border-radius: 14px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.header-title {
+  flex-grow: 1;
+  margin: auto 0;
+}
+
+.date-display {
+  color: #000;
+  font-size: 24px;
+  letter-spacing: -0.96px;
+  align-self: center;
+  margin-top: 10px;
+}
+
+.ride-card {
+  border-radius: 28px;
+  background-color: rgba(250, 250, 250, 0.7);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  display: flex;
+  margin-top: 14px;
+  width: 100%;
+  align-items: flex-start;
+  gap: 20px;
+  justify-content: space-between;
+  padding: 41px 23px 7px;
+}
+
+.ride-details {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  font-size: 16px;
+  color: #000;
+}
+
+.time-container {
+  display: flex;
+  flex-direction: column;
+  white-space: nowrap;
+}
+
+.end-time {
+  margin-top: 61px;
+}
+
+.route-icon {
+  aspect-ratio: 0.15;
+  object-fit: contain;
+  object-position: center;
+  width: 14px;
+  align-self: stretch;
+}
+
+.location-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.destination {
+  align-self: flex-start;
+  margin-top: 61px;
+}
+
+.ride-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.price-container {
+  display: flex;
+  padding-left: 19px;
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: 16px;
+  color: #000;
+}
+
+.seats-icon {
+  aspect-ratio: 1.69;
+  object-fit: contain;
+  object-position: center;
+  width: 61px;
+  margin: 48px 0 0 14px;
+}
+
+.driver-info {
+  align-self: flex-start;
+  display: flex;
+  gap: 10px;
+  white-space: nowrap;
+}
+
+.rating-container {
+  display: flex;
+  gap: 2px;
+  font-size: 12px;
+  color: #979797;
+  margin: auto 0;
+}
+
+.rating-value {
+  flex-grow: 1;
+}
+
+.rating-star {
+  aspect-ratio: 1.15;
+  object-fit: contain;
+  object-position: center;
+  width: 15px;
+}
+
+.driver-name {
+  color: #414141;
+  font-size: 15px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+</style>
+
+<section class="available-rides">
+  <header class="header-container">
+    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/8e1885447c0a2e9114105058357adeae41e7ec72c458dddf8bdf15252a83cd56?placeholderIfAbsent=true&apiKey=9dfda23d791048169a80340690397d74" alt="" class="header-icon" />
+    <h2 class="header-title">Caronas disponíveis</h2>
+  </header>
+  <p class="date-display">Sáb, 27 de maio</p>
+  
+  <article class="ride-card">
+    <div class="ride-details">
+      <div class="time-container">
+        <time>16h</time>
+        <time class="end-time">19h</time>
+      </div>
+      <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/152a9a84be34d8cfab13ec526f22db275095b4eada7b612e5d54dcba19bbd38f?placeholderIfAbsent=true&apiKey=9dfda23d791048169a80340690397d74" alt="Route icon" class="route-icon" />
+      <div class="location-container">
+        <span>São Carlos</span>
+        <span class="destination">São Paulo</span>
+      </div>
+    </div>
+    <div class="ride-info">
+      <div class="price-container">
+        <span>R$ 50,00</span>
+        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/5df3dc9f2cea719f85b4b207afed0a94e3ca8304ff07096b05296290e0679466?placeholderIfAbsent=true&apiKey=9dfda23d791048169a80340690397d74" alt="Available seats" class="seats-icon" />
+      </div>
+      <div class="driver-info">
+        <div class="rating-container">
+          <span class="rating-value">4.8</span>
+          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/7d5fddc0a1cdffbbf9c984165390f808bf47c932e956045d74719d2aee37dd09?placeholderIfAbsent=true&apiKey=9dfda23d791048169a80340690397d74" alt="Rating star" class="rating-star" />
+        </div>
+        <span class="driver-name">Pedro</span>
+      </div>
+    </div>
+  </article>
+  
+  <article class="ride-card">
+    <div class="ride-details">
+      <div class="time-container">
+        <time>20h</time>
+        <time class="end-time">22h</time>
+      </div>
+      <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/152a9a84be34d8cfab13ec526f22db275095b4eada7b612e5d54dcba19bbd38f?placeholderIfAbsent=true&apiKey=9dfda23d791048169a80340690397d74" alt="Route icon" class="route-icon" />
+      <div class="location-container">
+        <span>Campinas</span>
+        <span class="destination">São Paulo</span>
+      </div>
+    </div>
+    <div class="ride-info">
+      <div class="price-container">
+        <span>R$ 45,00</span>
+        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/5df3dc9f2cea719f85b4b207afed0a94e3ca8304ff07096b05296290e0679466?placeholderIfAbsent=true&apiKey=9dfda23d791048169a80340690397d74" alt="Available seats" class="seats-icon" />
+      </div>
+      <div class="driver-info">
+        <div class="rating-container">
+          <span class="rating-value">4.8</span>
+          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/7d5fddc0a1cdffbbf9c984165390f808bf47c932e956045d74719d2aee37dd09?placeholderIfAbsent=true&apiKey=9dfda23d791048169a80340690397d74" alt="Rating star" class="rating-star" />
+        </div>
+        <span class="driver-name">Heitor</span>
+      </div>
+    </div>
+  </article>
+</section>

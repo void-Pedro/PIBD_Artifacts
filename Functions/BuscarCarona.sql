@@ -2,10 +2,8 @@
 
 CREATE OR REPLACE FUNCTION BuscarCarona(
 	Cidade_saida IN VARCHAR2,
-	Estado_saida IN VARCHAR2,
 	DataSaida IN DATE,
 	Cidade_chegada IN VARCHAR2,
-	Estado_chegada IN VARCHAR2,
 	NumPassageiro IN NUMBER) 	 
 RETURN SYS_REFCURSOR 	 
 IS 	 

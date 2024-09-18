@@ -1,0 +1,209 @@
+<style>
+.ride-history {
+  border-radius: 30px;
+  background-color: #fff;
+  box-shadow: 0 4px 10px 5px rgba(0, 0, 0, 0.25);
+  max-width: 480px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 28px 24px 502px;
+}
+
+.header {
+  display: flex;
+  width: 100%;
+  gap: 31px;
+  color: #000;
+  text-align: center;
+  letter-spacing: -0.96px;
+  font: 700 24px DM Sans, sans-serif;
+}
+
+.back-icon {
+  aspect-ratio: 1;
+  object-fit: contain;
+  width: 44px;
+  align-self: flex-start;
+  margin-top: 16px;
+}
+
+.title-wrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: 4px;
+  flex-grow: 1;
+}
+
+.title {
+  align-self: flex-end;
+  margin-top: 29px;
+  flex-grow: 1;
+}
+
+.logo {
+  aspect-ratio: 1.58;
+  object-fit: contain;
+  width: 84px;
+  align-self: flex-start;
+}
+
+.user-name {
+  color: #000;
+  text-align: center;
+  align-self: center;
+  margin-top: 18px;
+  font: 700 24px DM Sans, sans-serif;
+}
+
+.ride-card {
+  border-radius: 1000px;
+  background-color: rgba(250, 250, 250, 0.7);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  display: flex;
+  margin-top: 43px;
+  width: 100%;
+  flex-direction: column;
+}
+
+.ride-details {
+  border-radius: 1000px;
+  background-color: rgba(250, 250, 250, 0.7);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  display: flex;
+  gap: 4px;
+  padding: 37px 15px;
+}
+
+.location {
+  color: #414141;
+  text-align: center;
+  flex-grow: 1;
+  font: 700 16px DM Sans, sans-serif;
+}
+
+.arrow-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+  position: relative;
+  aspect-ratio: 1.8;
+  width: 27px;
+}
+
+.arrow-bg, .arrow {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.route-line {
+  align-self: flex-start;
+  display: flex;
+  flex-direction: column;
+}
+
+.line {
+  z-index: 10;
+  height: 16px;
+  border: 2px solid #000;
+}
+
+.driver-info {
+  color: #414141;
+  text-align: center;
+  flex-grow: 1;
+  width: 126px;
+  font: 700 16px DM Sans, sans-serif;
+}
+
+.return-ride {
+  border-radius: 1000px;
+  background-color: rgba(250, 250, 250, 0.7);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  align-self: flex-start;
+  display: flex;
+  margin-top: 24px;
+  gap: 7px;
+  color: #414141;
+  text-align: center;
+  padding: 37px 15px;
+  font: 700 16px DM Sans, sans-serif;
+}
+
+.return-details {
+  display: flex;
+  gap: 1px;
+}
+
+.return-arrow {
+  aspect-ratio: 1.8;
+  object-fit: contain;
+  width: 27px;
+  margin: auto 0;
+}
+
+.return-route {
+  display: flex;
+  gap: 3px;
+}
+
+.return-line {
+  width: 2px;
+  height: 21px;
+  border: 2px solid #000;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+</style>
+
+<section class="ride-history">
+  <header class="header">
+    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/6b401a599e2f125e9ec9fc5c1b345bbd5f3e3bca730fc0625124ed73aa73c8f7?placeholderIfAbsent=true&apiKey=697a69656cc744ecb96f7144267d8a2a" alt="" class="back-icon" />
+    <div class="title-wrapper">
+      <h1 class="title">Histórico Caroneiro</h1>
+      <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/4e8fd86297d687476a302a92c3e3ece2b6828a610ec937418073ae29ae983bc4?placeholderIfAbsent=true&apiKey=697a69656cc744ecb96f7144267d8a2a" alt="Logo" class="logo" />
+    </div>
+  </header>
+  
+  <h2 class="user-name">Heitor Colichio</h2>
+  
+  <article class="ride-card">
+    <div class="ride-details">
+      <p class="location">São Carlos</p>
+      <div class="arrow-wrapper">
+        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/3bef3d41248bd83db66e992c9f5f502138a07f61b8a2a361c9dede2b3dbf8819?placeholderIfAbsent=true&apiKey=697a69656cc744ecb96f7144267d8a2a" alt="" class="arrow-bg" />
+        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/3bef3d41248bd83db66e992c9f5f502138a07f61b8a2a361c9dede2b3dbf8819?placeholderIfAbsent=true&apiKey=697a69656cc744ecb96f7144267d8a2a" alt="Arrow from São Carlos to São Paulo" class="arrow" />
+      </div>
+      <p class="location">São Paulo</p>
+      <div class="route-line">
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+      <p class="driver-info">Pedro - Fiat Onix</p>
+    </div>
+  </article>
+  
+  <article class="return-ride">
+    <div class="return-details">
+      <p class="location">São Paulo</p>
+      <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/3bef3d41248bd83db66e992c9f5f502138a07f61b8a2a361c9dede2b3dbf8819?placeholderIfAbsent=true&apiKey=697a69656cc744ecb96f7144267d8a2a" alt="Arrow from São Paulo to São Carlos" class="return-arrow" />
+    </div>
+    <div class="return-route">
+      <p class="location">São Carlos</p>
+      <div class="return-line"></div>
+      <p class="driver-info">Pedro - Fiat Onix</p>
+    </div>
+  </article>
+</section>

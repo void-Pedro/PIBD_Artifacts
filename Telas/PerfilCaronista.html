@@ -1,0 +1,184 @@
+<style>
+.profile-card {
+  border-radius: 30px;
+  background-color: #fff;
+  box-shadow: 0 4px 10px 5px rgba(0, 0, 0, 0.25);
+  display: flex;
+  max-width: 480px;
+  width: 100%;
+  padding: 28px 25px 0;
+  flex-direction: column;
+  overflow: hidden;
+  color: #827f7f;
+  text-align: center;
+  margin: 0 auto;
+  font: 700 16px DM Sans, sans-serif;
+}
+
+.profile-header {
+  display: flex;
+  width: 100%;
+  gap: 49px;
+  font-size: 24px;
+  color: #000;
+}
+
+.profile-icon {
+  aspect-ratio: 1;
+  object-fit: contain;
+  width: 44px;
+  margin-top: 16px;
+}
+
+.profile-info {
+  display: flex;
+  align-items: flex-start;
+  gap: 23px;
+  flex-grow: 1;
+}
+
+.profile-name-wrapper {
+  display: flex;
+  margin-top: 29px;
+  flex-direction: column;
+}
+
+.profile-title {
+  letter-spacing: -0.96px;
+  align-self: center;
+}
+
+.profile-name {
+  margin-top: 18px;
+}
+
+.profile-image {
+  aspect-ratio: 1.58;
+  object-fit: contain;
+  width: 84px;
+}
+
+.rating-section {
+  display: flex;
+  margin-top: 24px;
+  gap: 7px;
+}
+
+.rating-icon {
+  aspect-ratio: 1;
+  object-fit: contain;
+  width: 24px;
+}
+
+.rating-text {
+  flex-grow: 1;
+  margin: auto 0;
+}
+
+.stats-text {
+  margin: 12px 0 0 12px;
+}
+
+.verification-section {
+  display: flex;
+  gap: 10px;
+  margin: 21px 0 0 11px;
+}
+
+.verification-icon {
+  aspect-ratio: 1;
+  object-fit: contain;
+  width: 21px;
+}
+
+.vehicle-section {
+  display: flex;
+  margin-top: 16px;
+  gap: 3px;
+  white-space: nowrap;
+}
+
+.vehicle-icon {
+  aspect-ratio: 1.15;
+  object-fit: contain;
+  width: 31px;
+}
+
+.action-button {
+  border-radius: 24px;
+  align-self: center;
+  width: 100%;
+  max-width: 305px;
+  font-size: 20px;
+  color: #fff;
+  padding: 16px;
+  margin-top: 17px;
+}
+
+.primary-button {
+  background-color: #0b520b;
+}
+
+.secondary-button {
+  background-color: #000;
+}
+
+.divider {
+  min-height: 1px;
+  margin-top: 55px;
+  width: 100%;
+  border: 1px solid #000;
+}
+
+.footer-image {
+  aspect-ratio: 4.13;
+  object-fit: contain;
+  width: 100%;
+}
+</style>
+
+<section class="profile-card">
+  <header class="profile-header">
+    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/4ce337f09c611dcd0e040f41cfaef51009889ee18ccde29cd39fdd547c09df77?placeholderIfAbsent=true&apiKey=9dfda23d791048169a80340690397d74" alt="" class="profile-icon" />
+    <div class="profile-info">
+      <div class="profile-name-wrapper">
+        <h1 class="profile-title">Meu Perfil</h1>
+        <p class="profile-name">Heitor Colichio</p>
+      </div>
+      <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/4e8fd86297d687476a302a92c3e3ece2b6828a610ec937418073ae29ae983bc4?placeholderIfAbsent=true&apiKey=9dfda23d791048169a80340690397d74" alt="Profile picture of Heitor Colichio" class="profile-image" />
+    </div>
+  </header>
+  
+  <div class="rating-section">
+    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/304079071f6ca092a4b4cb1fd98bb2f862b22f6364059020c78653678b9372d5?placeholderIfAbsent=true&apiKey=9dfda23d791048169a80340690397d74" alt="" class="rating-icon" />
+    <p class="rating-text">5/5 - 18 avaliações como passageiro</p>
+  </div>
+  
+  <div class="rating-section">
+    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/304079071f6ca092a4b4cb1fd98bb2f862b22f6364059020c78653678b9372d5?placeholderIfAbsent=true&apiKey=9dfda23d791048169a80340690397d74" alt="" class="rating-icon" />
+    <p class="rating-text">4/5 - 3 avaliações como caronista</p>
+  </div>
+  
+  <p class="stats-text">Caronas completadas: 63</p>
+  <p class="stats-text">Caronas ofertadas: 32</p>
+  
+  <div class="verification-section">
+    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/ddeb5b9753a571caf5585dcbca9f92c7e76bbb99d2e925431de1b2bfd2dd8f1d?placeholderIfAbsent=true&apiKey=9dfda23d791048169a80340690397d74" alt="" class="verification-icon" />
+    <p>Documentação confirmada</p>
+  </div>
+  
+  <div class="vehicle-section">
+    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/1c4fb7ca887e93e4b17939c5020c270acdba863cf4ae3d3893f85e778b63e0da?placeholderIfAbsent=true&apiKey=9dfda23d791048169a80340690397d74" alt="" class="vehicle-icon" />
+    <p>Veículos</p>
+  </div>
+  
+  <button class="action-button primary-button">Mensagens</button>
+  <button class="action-button secondary-button">Alterar Informações</button>
+  <button class="action-button secondary-button">Viagens oferecidas</button>
+  <button class="action-button secondary-button">Minhas viagens</button>
+  
+  <hr class="divider" />
+  <hr class="divider" />
+  
+  <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/3978a81aa03d8dbd0d8c4b83cb283699875b50844b4c0b7837c0ab45efa2c87b?placeholderIfAbsent=true&apiKey=9dfda23d791048169a80340690397d74" alt="" class="footer-image" />
+</section>

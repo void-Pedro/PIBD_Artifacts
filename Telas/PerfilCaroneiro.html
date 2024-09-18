@@ -1,0 +1,156 @@
+<style>
+.profile-card {
+  border-radius: 30px;
+  background-color: #fff;
+  box-shadow: 0 4px 10px 5px rgba(0, 0, 0, 0.25);
+  max-width: 480px;
+  width: 100%;
+  padding: 46px 34px 0;
+  margin: 0 auto;
+  color: #827f7f;
+  text-align: center;
+  font: 700 16px DM Sans, sans-serif;
+}
+
+.profile-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  font-size: 24px;
+  color: #000;
+}
+
+.profile-avatar {
+  aspect-ratio: 1.08;
+  object-fit: contain;
+  width: 57px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 50%;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  margin-top: 11px;
+}
+
+.profile-title {
+  letter-spacing: -0.96px;
+  align-self: center;
+}
+
+.profile-name {
+  margin-top: 18px;
+}
+
+.rating-section {
+  display: flex;
+  margin-top: 54px;
+  gap: 11px;
+  align-items: center;
+}
+
+.rating-icon {
+  aspect-ratio: 1;
+  object-fit: contain;
+  width: 24px;
+}
+
+.completed-rides {
+  margin-top: 16px;
+  text-align: left;
+}
+
+.documentation-section {
+  display: flex;
+  margin-top: 19px;
+  gap: 10px;
+  align-items: center;
+}
+
+.documentation-icon {
+  aspect-ratio: 1;
+  object-fit: contain;
+  width: 21px;
+}
+
+.action-button {
+  border-radius: 24px;
+  width: 100%;
+  max-width: 305px;
+  font-size: 20px;
+  color: #fff;
+  padding: 16px;
+  margin-top: 18px;
+  border: none;
+  cursor: pointer;
+}
+
+.primary-button {
+  background-color: #0b520b;
+}
+
+.secondary-button {
+  background-color: #000;
+}
+
+.divider {
+  height: 1px;
+  width: 100%;
+  background-color: #000;
+  margin-top: 77px;
+}
+
+.footer-image {
+  aspect-ratio: 4.13;
+  object-fit: contain;
+  width: 100%;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+</style>
+
+<section class="profile-card">
+  <header class="profile-header">
+    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/43ec49a310e1bd1dee8cdd145c4e4242d391be63974153a8c71e07b3b779cdf9?placeholderIfAbsent=true&apiKey=9dfda23d791048169a80340690397d74" alt="" class="rating-icon" />
+    <div class="profile-info">
+      <h1 class="profile-title">Meu Perfil</h1>
+      <p class="profile-name">Heitor Colichio</p>
+    </div>
+    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/fa6965177550200d2b9f58ab19b76f9332441533abcbfc2075908b49867578c1?placeholderIfAbsent=true&apiKey=9dfda23d791048169a80340690397d74" alt="Profile picture of Heitor Colichio" class="profile-avatar" />
+  </header>
+  
+  <div class="rating-section">
+    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/304079071f6ca092a4b4cb1fd98bb2f862b22f6364059020c78653678b9372d5?placeholderIfAbsent=true&apiKey=9dfda23d791048169a80340690397d74" alt="Star rating icon" class="rating-icon" />
+    <p>5/5 - 18 avaliações</p>
+  </div>
+  
+  <p class="completed-rides">Caronas completadas: 63</p>
+  
+  <div class="documentation-section">
+    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/ddeb5b9753a571caf5585dcbca9f92c7e76bbb99d2e925431de1b2bfd2dd8f1d?placeholderIfAbsent=true&apiKey=9dfda23d791048169a80340690397d74" alt="Documentation confirmation icon" class="documentation-icon" />
+    <p>Documentação confirmada</p>
+  </div>
+  
+  <nav>
+    <button class="action-button primary-button">Mensagens</button>
+    <button class="action-button secondary-button">Minhas viagens</button>
+    <button class="action-button secondary-button">Alterar Informações</button>
+  </nav>
+  
+  <div class="divider"></div>
+  <div class="divider"></div>
+  
+  <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/3978a81aa03d8dbd0d8c4b83cb283699875b50844b4c0b7837c0ab45efa2c87b?placeholderIfAbsent=true&apiKey=9dfda23d791048169a80340690397d74" alt="" class="footer-image" />
+</section>

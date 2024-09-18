@@ -1,0 +1,149 @@
+<style>
+.ride-search {
+  border-radius: 30px;
+  background-color: #fff;
+  box-shadow: 0 4px 10px 5px rgba(0, 0, 0, 0.25);
+  max-width: 480px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 11px 0 0;
+  overflow: hidden;
+}
+
+.logo-container {
+  display: flex;
+  gap: 39px;
+  justify-content: flex-end;
+}
+
+.logo {
+  aspect-ratio: 1.85;
+  object-fit: contain;
+  width: 133px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.secondary-logo {
+  aspect-ratio: 1.58;
+  object-fit: contain;
+  width: 84px;
+  margin-top: 17px;
+}
+
+.search-form {
+  border-radius: 24px;
+  background-color: #fff;
+  box-shadow: 0 4px 80px rgba(0, 0, 0, 0.15);
+  margin: 47px auto 0;
+  width: 100%;
+  max-width: 358px;
+  padding: 29px 19px 50px;
+  text-align: center;
+  font: 700 12px DM Sans, sans-serif;
+}
+
+.search-title {
+  color: #000;
+  font-size: 29px;
+  letter-spacing: -1.16px;
+  margin-bottom: 25px;
+}
+
+.search-input {
+  border-radius: 24px;
+  background-color: #fff;
+  width: 248px;
+  max-width: 100%;
+  padding: 16px 20px;
+  margin-bottom: 11px;
+  border: 1px solid #ccc;
+}
+
+.search-button {
+  border-radius: 24px;
+  background-color: #0b520b;
+  width: 162px;
+  max-width: 100%;
+  font-size: 20px;
+  color: #fff;
+  padding: 4px 49px 16px;
+  border: none;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.recent-searches {
+  margin-top: 50px;
+}
+
+.search-item {
+  display: flex;
+  gap: 4px;
+  font-size: 15px;
+  color: #000;
+  letter-spacing: -0.6px;
+  margin-bottom: 15px;
+}
+
+.search-icon {
+  aspect-ratio: 1.26;
+  object-fit: contain;
+  width: 39px;
+}
+
+.search-text {
+  flex-grow: 1;
+  margin: auto 0;
+}
+
+.divider {
+  border: 1px solid #000;
+  margin: 145px 0 0;
+}
+
+.footer-image {
+  aspect-ratio: 4.13;
+  object-fit: contain;
+  width: 100%;
+}
+</style>
+
+<section class="ride-search">
+  <div class="logo-container">
+    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/4dacc2eef37a0ec191cd8e88ecfe05182e646976280a0e1f5a0c31ce1ebe2190?placeholderIfAbsent=true&apiKey=9dfda23d791048169a80340690397d74" alt="Main logo" class="logo">
+    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/4e8fd86297d687476a302a92c3e3ece2b6828a610ec937418073ae29ae983bc4?placeholderIfAbsent=true&apiKey=9dfda23d791048169a80340690397d74" alt="Secondary logo" class="secondary-logo">
+  </div>
+  
+  <form class="search-form">
+    <h2 class="search-title">Para onde quer ir?</h2>
+    <input type="text" class="search-input" placeholder="Saindo de..." aria-label="Origem">
+    <input type="text" class="search-input" placeholder="Indo para..." aria-label="Destino">
+    
+    <div class="search-input">
+      <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/9e08368e8714a0516b1eb8b0d4691e4008a28dfb263cab9e129a193f3e83be5e?placeholderIfAbsent=true&apiKey=9dfda23d791048169a80340690397d74" alt="Calendar icon" class="search-icon">
+      <span>Data</span>
+    </div>
+    
+    <div class="search-input">
+      <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/8476ed2d8f2333243ca9560736d9507cd7ebfe8e1e53b2331fd3f2c5f4c303d1?placeholderIfAbsent=true&apiKey=9dfda23d791048169a80340690397d74" alt="People icon" class="search-icon">
+      <span>Pessoas</span>
+    </div>
+    
+    <button type="submit" class="search-button">Buscar</button>
+    
+    <div class="recent-searches">
+      <div class="search-item">
+        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/e502c6caa0629333899ea21bd467ff2d01a5a9bd4abbada8d78bc412c10c9e58?placeholderIfAbsent=true&apiKey=9dfda23d791048169a80340690397d74" alt="Location icon" class="search-icon">
+        <p class="search-text">São Carlos, Sp Guará, Sp - 2 pessoas</p>
+      </div>
+      <div class="search-item">
+        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/e502c6caa0629333899ea21bd467ff2d01a5a9bd4abbada8d78bc412c10c9e58?placeholderIfAbsent=true&apiKey=9dfda23d791048169a80340690397d74" alt="Location icon" class="search-icon">
+        <p class="search-text">Uberaba, Mg São Paulo, Sp - 1 pessoa</p>
+      </div>
+    </div>
+  </form>
+  
+  <hr class="divider">
+  <hr class="divider">
+  <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/f7eda5fcb2cfb948cbfb10a864a9724d3da0986732473db6b188bc946d96b935?placeholderIfAbsent=true&apiKey=9dfda23d791048169a80340690397d74" alt="Footer decoration" class="footer-image">
+</section>
