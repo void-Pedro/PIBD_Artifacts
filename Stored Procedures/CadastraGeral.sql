@@ -11,5 +11,4 @@ AS
 BEGIN
 	insert into dbo.usuario_geral (nome_completo, data_nascimento, DDI, DDD, num_telefone, sexo, rede_social, cadastro_stat)
 	Values (@NomeCompletoIn, @DataNascimentoIn, @DDIIn, @DDDIn, @NumeroTelefoneIn, @SexoPessoa, @RedeSocial, 'completo')
-	END
 END
