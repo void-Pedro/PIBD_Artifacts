@@ -7,19 +7,20 @@ CREATE TABLE usuario_geral (
    ID INT IDENTITY(1,1),
    rede_social VARCHAR(100),
 
-   DDI INT NOT NULL,
-   DDD INT NOT NULL,
-   num_telefone VARCHAR (50) NOT NULL,
+   DDI INT,
+   DDD INT,
+   num_telefone VARCHAR (50),
 
-   nome_completo VARCHAR(100) NOT NULL,
-   data_nascimento VARCHAR(100) NOT NULL,
-   sexo VARCHAR(100) NOT NULL,
+   nome_completo VARCHAR(100),
+   data_nascimento VARCHAR(100),
+   sexo VARCHAR(100),
+   cadastro_stat VARCHAR(50) NOT NULL,
    PRIMARY KEY (ID)
 );
 GO
 
 CREATE TABLE estrangeiro (
-   ID_usuario INT,
+   ID_usuario INT NOT NULL,
    validade_passaporte VARCHAR(50) NOT NULL,
    numero_passaporte VARCHAR(50) NOT NULL,
    Senha VARCHAR(50) NOT NULL,
@@ -30,7 +31,7 @@ CREATE TABLE estrangeiro (
 GO
 
 CREATE TABLE brasileiro (
-   ID_usuario INT,
+   ID_usuario INT NOT NULL,
    CPF VARCHAR(50) NOT NULL,
    Senha VARCHAR(50) NOT NULL,
 
