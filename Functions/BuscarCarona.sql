@@ -18,7 +18,31 @@ BEGIN
         	AND v.Data_saida = DataSaida	 
         	AND v.Numero_max_pessoas >= NumPassageiro;	 
 RETURN ccarona;	 
-END; */
+END; 
+
+ALTER PROCEDURE [dbo].[BuscarCarona]
+    @Cidade_saida NVARCHAR(100),
+    @DataSaida DATE,
+    @Cidade_chegada NVARCHAR(100),
+    @NumPassageiro INT
+AS
+BEGIN
+    SELECT 
+        pis.cidade,
+		piv.cidade_chegada,
+        v.data_hora_saida,  
+        v.numero_max_pessoas, 
+        v.valor  
+    FROM viagem v
+    JOIN ponto_viagem piv ON v.ID_viagem = piv.ID_viagem
+	JOIN pontos_intermediarios pis ON piv.CEP_ponto = pis.CEP
+    WHERE pis.cidade = @Cidade_saida 
+	  AND piv.cidade_chegada = @Cidade_chegada
+      AND CONVERT(DATE, v.data_hora_saida, 120) >= @DataSaida
+      AND v.Numero_max_pessoas >= @NumPassageiro;
+END;
+
+*/
 
 
 --Busca Carona 
